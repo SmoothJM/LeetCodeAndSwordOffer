@@ -34,7 +34,10 @@ public class TreeNode {
     }
 
     public static void show(TreeNode root){
-        if(root == null) return;
+        if(root == null) {
+            System.out.println("null");
+            return;
+        }
         LinkedList<TreeNode> nodes = new LinkedList<>();
         nodes.add(root);
         while(!nodes.isEmpty()){
