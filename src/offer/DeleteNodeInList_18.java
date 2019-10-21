@@ -1,5 +1,7 @@
 package offer;
 
+import java.util.List;
+
 public class DeleteNodeInList_18 {
 	public static void main(String[] args) {
 		ListNode head = new ListNode(1);
@@ -12,7 +14,7 @@ public class DeleteNodeInList_18 {
 		b.next = c;
 		c.next = d;
 		d.next = null;
-		head = deleteNode2(head, a);
+		head = deleteNode2(head, d);
 		while (head != null) {
 			System.out.print(head.value + " ");
 			head = head.next;
@@ -45,12 +47,24 @@ public class DeleteNodeInList_18 {
 		}
 		return originListNode;
 	}
+
 	public static ListNode deleteNode2(ListNode head, ListNode target) {
 		if (head == null || target == null) {
 			return head;
 		}
-		ListNode originListNode = head;
-		target = target.next;
-		return originListNode;
+		if(target.next != null){
+			target.value = target.next.value;
+			target.next = target.next.next;
+			target = null;
+		}else if(head == target){
+			head = null;
+		}else{
+			ListNode origin = head;
+			while(origin.next != target) {
+				origin = origin.next;
+			}
+			origin.next = null;
+		}
+		return head;
 	}
 }
