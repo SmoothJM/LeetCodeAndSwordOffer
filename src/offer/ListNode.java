@@ -10,7 +10,7 @@ public class ListNode {
 	    }
 
 	    public static ListNode buildList(){
-			ListNode head = new ListNode(1);
+			ListNode head = new ListNode(2);
 			ListNode a = new ListNode(2);
 			ListNode b = new ListNode(3);
 			ListNode c = new ListNode(3);

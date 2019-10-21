@@ -4,8 +4,8 @@ public class DeleteDuplicateNodeInSortedList_18_2 {
     public static void main(String[] args) {
         ListNode head = ListNode.buildList();
         ListNode.show(head);
-        head = deleteDuplication(head);
-//        head = delete(head);
+//        head = deleteDuplication(head);
+        head = delete(head);
         ListNode.show(head);
 
     }
