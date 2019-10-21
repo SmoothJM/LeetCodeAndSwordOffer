@@ -2,10 +2,10 @@ package easy;
 
 public class PlusOne_66 {
     public static void main(String[] args) {
-        int[] arr = new int[]{9, 9, 9};
+        int[] arr = new int[]{1, 9, 9};
         int[] a = plusOne(arr);
         for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
+            System.out.print(a[i]);
         }
     }
 
