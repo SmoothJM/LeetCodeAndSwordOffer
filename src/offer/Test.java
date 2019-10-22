@@ -2,11 +2,8 @@ package offer;
 
 public class Test {
     public static void main(String[] args) {
-    	ListNode h = ListNode.buildList();
-    	ListNode o = h;
-    	h.next=null;
-    	ListNode.show(o);
     }
+
 
     private static void bigPlus(String a, String b) {
         int carry = 0;

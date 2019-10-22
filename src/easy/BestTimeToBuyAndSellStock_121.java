@@ -5,7 +5,7 @@ public class BestTimeToBuyAndSellStock_121 {
         int[] a = new int[]{7, 1, 5, 3, 6, 4};
         int[] a2 = new int[]{7, 6, 4, 3, 1};
         int[] a3 = new int[]{1, 1, 1, 1, 1};
-        System.out.println(maxProfit3(a));
+        System.out.println(maxProfit4(a));
 //        System.out.println(maxProfit3(a3));
     }
 
@@ -16,9 +16,10 @@ public class BestTimeToBuyAndSellStock_121 {
         for (int i = 0; i < prices.length; i++) {
             temp = prices[i];
             for (int j = i + 1; j < prices.length; j++) {
-                if (max < prices[j] - temp) {
-                    max = prices[j] - temp;
-                }
+//                if (max < prices[j] - temp) {
+//                    max = prices[j] - temp;
+//                }
+                max = Math.max(max,prices[j]-temp);
             }
             if (profit < max) {
                 profit = max;
@@ -49,7 +50,20 @@ public class BestTimeToBuyAndSellStock_121 {
                 }
             }
         }
-
         return ans;
+    }
+
+    public static int maxProfit4(int[] prices){
+        int maxProfit = 0;
+        int minProfit = Integer.MAX_VALUE;
+        for (int i = 0; i < prices.length; i++) {
+            if(minProfit>prices[i]){
+                minProfit = prices[i];
+            }else{
+                maxProfit = Math.max(maxProfit,prices[i]-minProfit);
+            }
+        }
+
+        return maxProfit;
     }
 }
