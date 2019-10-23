@@ -4,9 +4,9 @@ import java.util.Stack;
 
 public class Test {
     public static void main(String[] args) {
-        Stack<Integer> s = new Stack<>();
-        s.pop();
-//        System.out.println(s.peek());
+        int n=66;
+        char c =(char) (n);
+        System.out.println(c);
     }
 
     public static void fun(  ){
