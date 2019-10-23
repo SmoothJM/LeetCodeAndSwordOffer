@@ -60,6 +60,15 @@ public class SingleNumber_136 {
 //        return 2(Math.)
 //    }
 
+    /**
+     * result of same number XOR is zero;
+     * result of zero and number XOR is still number;
+     * a^a = 0
+     * a^0 = a
+     * so: a^c^b^a^b = a^a^b^b^c = c 
+     * @param nums
+     * @return
+     */
     public static int singleNumber3(int[] nums){
         int result=0;
         for (int n: nums) {

@@ -4,14 +4,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 public class RemoveDuplicatesFromSortedList_83 {
     public static void main(String[] args) {
@@ -27,7 +19,7 @@ public class RemoveDuplicatesFromSortedList_83 {
 
         ListNode l = deleteDuplicates2(h1);
         while(l!=null){
-            System.out.print(l.val+" ");
+            System.out.print(l.value+" ");
             l = l.next;
         }
     }
@@ -44,8 +36,8 @@ public class RemoveDuplicatesFromSortedList_83 {
         Set<Integer> set = new HashSet<>();
         ArrayList<ListNode> ls = new ArrayList<>();
         while(head!=null){
-            if(!set.contains(head.val)){
-                set.add(head.val);
+            if(!set.contains(head.value)){
+                set.add(head.value);
                 ls.add(head);
             }
             head = head.next;
@@ -68,7 +60,7 @@ public class RemoveDuplicatesFromSortedList_83 {
     public static ListNode deleteDuplicates2(ListNode head) {
         ListNode newHead = head;
         while(head!=null){
-            if(head.next != null && head.val == head.next.val){
+            if(head.next != null && head.value == head.next.value){
                 head.next = head.next.next;
             }else{
                 head = head.next;

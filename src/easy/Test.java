@@ -1,9 +1,12 @@
 package easy;
 
+import java.util.Stack;
+
 public class Test {
     public static void main(String[] args) {
-        String s = "AbcFF123";
-        System.out.println(s.toLowerCase());
+        Stack<Integer> s = new Stack<>();
+        s.pop();
+//        System.out.println(s.peek());
     }
 
     public static void fun(  ){
