@@ -21,7 +21,7 @@ public class TwoSum_1 {
         }
         return null;
     }
-    public static int[] twoSumSingleFor(int[] nums, int target) {//两个for循环
+    public static int[] twoSumSingleFor(int[] nums, int target) {
         Map<Integer,Integer> map = new HashMap<Integer,Integer>();
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
