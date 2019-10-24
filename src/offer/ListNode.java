@@ -10,13 +10,13 @@ public class ListNode {
 	    }
 
 	    public static ListNode buildList(){
-			ListNode head = new ListNode(2);
+			ListNode head = new ListNode(1);
 			ListNode a = new ListNode(2);
 			ListNode b = new ListNode(3);
-			ListNode c = new ListNode(3);
-			ListNode d = new ListNode(4);
-			ListNode e = new ListNode(4);
-			ListNode f = new ListNode(5);
+			ListNode c = new ListNode(4);
+			ListNode d = new ListNode(5);
+			ListNode e = new ListNode(6);
+			ListNode f = new ListNode(7);
 			head.next = a;
 			a.next = b;
 			b.next = c;
