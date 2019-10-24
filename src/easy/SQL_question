@@ -64,3 +64,31 @@
 # Answer:
     SELECT NAME AS Customers  FROM Customers  WHERE id NOT IN (SELECT CustomerId  FROM orders);
 ###############################################################################
+#196 Delete Duplicate Emails
+# Structure:
+# Answer:
+	DELETE p1 FROM Person p1, Person p2 WHERE p1.Email = p2.Email AND p1.Id > p2.Id
+###############################################################################
+#197 
+# Structure:
+	Create table If Not Exists Weather (Id int, RecordDate date, Temperature int);
+	Truncate table Weather;
+	insert into Weather (Id, RecordDate, Temperature) values ('1', '2015-01-01', '10');
+	insert into Weather (Id, RecordDate, Temperature) values ('2', '2015-01-02', '25');
+	insert into Weather (Id, RecordDate, Temperature) values ('3', '2015-01-03', '20');
+	insert into Weather (Id, RecordDate, Temperature) values ('4', '2015-01-04', '30');
+# Answer:
+	SELECT today.id as Id
+	FROM weather today JOIN weather yesterday 
+	ON DATEDIFF(today.RecordDate,yesterday.RecordDate)=1 
+	AND today.temperature > yesterday.temperature;
+
+	
+	
+	
+	
+	
+	
+	
+	
+	

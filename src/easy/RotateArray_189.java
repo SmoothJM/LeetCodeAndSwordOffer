@@ -23,14 +23,7 @@ public class RotateArray_189 {
         System.out.println(Arrays.toString(nums));
     }
 
-    /**
-     * @param nums
-     * @param k
-     */
-    public static void rotate2(int[] nums, int k) {
-        if (nums == null || nums.length == 0 || k < 1) return;
-
-    }
+  
 
     /**
      * 旋转，时间：On， 空间：O1
