@@ -33,7 +33,7 @@ public class IntersectionOfTwoLinkedLists_160 {
         ListNode.show(l2);
         ListNode.show(l3);
         
-        System.out.println(getIntersectionNode2(l1,l2).value);
+        System.out.println(getIntersectionNode2(l1,l2).val);
 //        System.out.println(getIntersectionNode(l1,l3).value);
 	}
 	

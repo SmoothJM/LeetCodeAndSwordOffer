@@ -19,7 +19,7 @@ public class RemoveDuplicatesFromSortedList_83 {
 
         ListNode l = deleteDuplicates2(h1);
         while(l!=null){
-            System.out.print(l.value+" ");
+            System.out.print(l.val+" ");
             l = l.next;
         }
     }
@@ -36,8 +36,8 @@ public class RemoveDuplicatesFromSortedList_83 {
         Set<Integer> set = new HashSet<>();
         ArrayList<ListNode> ls = new ArrayList<>();
         while(head!=null){
-            if(!set.contains(head.value)){
-                set.add(head.value);
+            if(!set.contains(head.val)){
+                set.add(head.val);
                 ls.add(head);
             }
             head = head.next;
@@ -60,7 +60,7 @@ public class RemoveDuplicatesFromSortedList_83 {
     public static ListNode deleteDuplicates2(ListNode head) {
         ListNode newHead = head;
         while(head!=null){
-            if(head.next != null && head.value == head.next.value){
+            if(head.next != null && head.val == head.next.val){
                 head.next = head.next.next;
             }else{
                 head = head.next;

@@ -1,22 +1,22 @@
 package easy;
 
 public class ListNode {
-	    public int value;
+	    public int val;
 	    public ListNode next;
 
 	    ListNode(){}
 	    ListNode(int value) {
-	        this.value = value;
+	        this.val = value;
 	    }
 
 	    public static ListNode buildList(){
 			ListNode head = new ListNode(2);
 			ListNode a = new ListNode(2);
 			ListNode b = new ListNode(3);
-			ListNode c = new ListNode(3);
-			ListNode d = new ListNode(4);
+			ListNode c = new ListNode(4);
+			ListNode d = new ListNode(2);
 			ListNode e = new ListNode(4);
-			ListNode f = new ListNode(5);
+			ListNode f = new ListNode(2);
 			head.next = a;
 			a.next = b;
 			b.next = c;
@@ -34,9 +34,9 @@ public class ListNode {
 			}
 	    	while(head!=null){
 				if(head.next == null){
-					System.out.print(head.value);
+					System.out.print(head.val);
 				}else{
-					System.out.print(head.value+" => ");
+					System.out.print(head.val+" => ");
 				}
 				head = head.next;
 			}
