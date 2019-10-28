@@ -6,8 +6,8 @@ public class CountdownKthNodeOfList_22 {
 	public static void main(String[] args) {
 		ListNode head = ListNode.buildList();
 		ListNode.show(head);
-		int k=3;
-		System.out.println(FindKthToTail(head, k).value);
+		int k=8;
+		FindKthToTail2(head, k);
 	}
 	
 	public static ListNode FindKthToTail(ListNode head,int k) {
@@ -21,4 +21,21 @@ public class CountdownKthNodeOfList_22 {
 		
 		return list.get(list.size()-k);
     }
+
+    public static ListNode FindKthToTail2(ListNode head, int k){
+		if(head == null || k ==0) return head;
+		ListNode first = head;
+		ListNode second = head;
+		for (int i = 0; i < k-1; i++) {
+			if(first.next == null) return null;
+			else first = first.next;
+
+		}
+
+		while(first.next!=null){
+			second = second.next;
+			first = first.next;
+		}
+		return second;
+	}
 }
