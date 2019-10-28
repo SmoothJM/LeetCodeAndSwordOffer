@@ -1,18 +1,18 @@
 package offer;
 
 import java.util.Arrays;
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int value) {
-        this.val = value;
-        this.left = null;
-        this.right = null;
-    }
-}
+//
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//
+//    TreeNode(int value) {
+//        this.val = value;
+//        this.left = null;
+//        this.right = null;
+//    }
+//}
 
 public class RebuildBinaryTree07 {
     public static void main(String[] args) {

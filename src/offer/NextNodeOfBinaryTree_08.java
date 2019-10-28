@@ -1,12 +1,12 @@
 package offer;
 
 
-class TreeNode2{
+class TreeNodeWithParent{
     String val;
-    TreeNode2 parent;
-    TreeNode2 left;
-    TreeNode2 right;
-    TreeNode2(String val){
+    TreeNodeWithParent parent;
+    TreeNodeWithParent left;
+    TreeNodeWithParent right;
+    TreeNodeWithParent(String val){
         this.val = val;
         this.parent=null;
         this.left=null;
@@ -17,15 +17,15 @@ class TreeNode2{
 public class NextNodeOfBinaryTree_08 {
     public static void main(String[] args) {
         //TreeNode2 root = buildTree();
-        TreeNode2 a = new TreeNode2("a");
-        TreeNode2 b = new TreeNode2("b");
-        TreeNode2 c = new TreeNode2("c");
-        TreeNode2 d = new TreeNode2("d");
-        TreeNode2 e = new TreeNode2("e");
-        TreeNode2 f = new TreeNode2("f");
-        TreeNode2 g = new TreeNode2("g");
-        TreeNode2 h = new TreeNode2("h");
-        TreeNode2 i = new TreeNode2("i");
+        TreeNodeWithParent a = new TreeNodeWithParent("a");
+        TreeNodeWithParent b = new TreeNodeWithParent("b");
+        TreeNodeWithParent c = new TreeNodeWithParent("c");
+        TreeNodeWithParent d = new TreeNodeWithParent("d");
+        TreeNodeWithParent e = new TreeNodeWithParent("e");
+        TreeNodeWithParent f = new TreeNodeWithParent("f");
+        TreeNodeWithParent g = new TreeNodeWithParent("g");
+        TreeNodeWithParent h = new TreeNodeWithParent("h");
+        TreeNodeWithParent i = new TreeNodeWithParent("i");
         a.left = b;
         a.right = c;
         b.parent = a;
@@ -42,12 +42,12 @@ public class NextNodeOfBinaryTree_08 {
         g.parent=c;
         h.parent=e;
         i.parent=e;
-        TreeNode2[] ts = new TreeNode2[]{a,b,c,d,e,f,g,h,i};
+        TreeNodeWithParent[] ts = new TreeNodeWithParent[]{a,b,c,d,e,f,g,h,i};
         for (int j = 0; j < ts.length; j++) {
             findNextNode(ts[j]);
         }
     }
-    public static void findNextNode(TreeNode2 node){
+    public static void findNextNode(TreeNodeWithParent node){
         if(node == null){return;}
         if(node.right != null){
             node = node.right;
@@ -78,16 +78,16 @@ public class NextNodeOfBinaryTree_08 {
      * build the tree to generate test case
      * @return root
      */
-    public static TreeNode2 buildTree(){
-        TreeNode2 a = new TreeNode2("a");
-        TreeNode2 b = new TreeNode2("b");
-        TreeNode2 c = new TreeNode2("c");
-        TreeNode2 d = new TreeNode2("d");
-        TreeNode2 e = new TreeNode2("e");
-        TreeNode2 f = new TreeNode2("f");
-        TreeNode2 g = new TreeNode2("g");
-        TreeNode2 h = new TreeNode2("h");
-        TreeNode2 i = new TreeNode2("i");
+    public static TreeNodeWithParent buildTree(){
+        TreeNodeWithParent a = new TreeNodeWithParent("a");
+        TreeNodeWithParent b = new TreeNodeWithParent("b");
+        TreeNodeWithParent c = new TreeNodeWithParent("c");
+        TreeNodeWithParent d = new TreeNodeWithParent("d");
+        TreeNodeWithParent e = new TreeNodeWithParent("e");
+        TreeNodeWithParent f = new TreeNodeWithParent("f");
+        TreeNodeWithParent g = new TreeNodeWithParent("g");
+        TreeNodeWithParent h = new TreeNodeWithParent("h");
+        TreeNodeWithParent i = new TreeNodeWithParent("i");
         a.left = b;
         a.right = c;
         b.parent = a;
@@ -106,13 +106,13 @@ public class NextNodeOfBinaryTree_08 {
         i.parent=e;
         return a;
     }
-    public static void preOrder(TreeNode2 root){
+    public static void preOrder(TreeNodeWithParent root){
         if(root == null){return;}
         System.out.print(root.val+" ");
         preOrder(root.left);
         preOrder(root.right);
     }
-    public static void midOrder(TreeNode2 root){
+    public static void midOrder(TreeNodeWithParent root){
         if(root == null){return;}
         midOrder(root.left);
         System.out.print(root.val+" ");
