@@ -58,7 +58,7 @@ public class TreeNode {
     
     public static void showPreOrder(TreeNode root) {
     	if(root == null) return;
-    	System.out.println(root.val);
+    	System.out.print(root.val+" ");
     	showPreOrder(root.left);
     	showPreOrder(root.right);
     }

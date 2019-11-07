@@ -1,7 +1,12 @@
 package offer;
 
+import java.util.Stack;
+
 public class Test {
     public static void main(String[] args) {
+
+        loopTreeNode(TreeNode.buildTree());
+        TreeNode.showPreOrder(TreeNode.buildTree());
     }
 
 
@@ -29,5 +34,19 @@ public class Test {
         System.out.println(sb.reverse().toString());
     }
 
+    public static void loopTreeNode(TreeNode root){
+        if(root==null) return;
+        Stack<TreeNode> stack = new Stack<>();
+        while(root!=null || !stack.isEmpty()){
+            if(root!=null){
+                System.out.print(root.val+" ");
+                stack.push(root);
+                root = root.left;
+            }else{
+                root = stack.pop().right;
+            }
+        }
+        System.out.println();
+    }
 
 }
