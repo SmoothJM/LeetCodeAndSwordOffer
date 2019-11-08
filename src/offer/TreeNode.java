@@ -18,8 +18,8 @@ public class TreeNode {
         TreeNode b = new TreeNode(8);
         TreeNode c = new TreeNode(11);
         TreeNode d = new TreeNode(13);
-        TreeNode e = new TreeNode(4);
-        TreeNode f = new TreeNode(7);
+        TreeNode e = new TreeNode(6);
+        TreeNode f = new TreeNode(7);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
         TreeNode g = new TreeNode(2);
         TreeNode h = new TreeNode(1);
         root.left = a;
