@@ -17,9 +17,5 @@ public class PathSum_112 {
         return hasPathSum(root.left,sum) || hasPathSum(root.right,sum);
     }
 
-    public static int count(TreeNode root) {
-        int result = 0;
 
-        return result;
-    }
 }

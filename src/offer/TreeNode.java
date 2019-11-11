@@ -17,7 +17,7 @@ public class TreeNode {
         TreeNode a = new TreeNode(4);
         TreeNode b = new TreeNode(8);
         TreeNode c = new TreeNode(11);
-        TreeNode d = new TreeNode(13);
+        TreeNode d = new TreeNode(9);
         TreeNode e = new TreeNode(6);
         TreeNode f = new TreeNode(7);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
         TreeNode g = new TreeNode(2);
@@ -32,7 +32,22 @@ public class TreeNode {
         e.right = h;
         return root;
     }
-
+    public static TreeNode buildSearchTree() {
+        TreeNode root10 = new TreeNode(10);
+        TreeNode a6 = new TreeNode(6);
+        TreeNode b14 = new TreeNode(14);
+        TreeNode c4 = new TreeNode(4);
+        TreeNode d8 = new TreeNode(8);
+        TreeNode e12 = new TreeNode(12);
+        TreeNode f16 = new TreeNode(16);
+        root10.left = a6;
+        root10.right = b14;
+        a6.left = c4;
+        a6.right = d8;
+        b14.left = e12;
+        b14.right = f16;
+        return root10;
+    }
     public static void showLevel(TreeNode root){
         if(root == null) {
             System.out.println("null");
@@ -61,5 +76,11 @@ public class TreeNode {
     	System.out.print(root.val+" ");
     	showPreOrder(root.left);
     	showPreOrder(root.right);
+    }
+    public static void showMidOrder(TreeNode root) {
+        if(root == null) return;
+        showMidOrder(root.left);
+        System.out.print(root.val+" ");
+        showMidOrder(root.right);
     }
 }

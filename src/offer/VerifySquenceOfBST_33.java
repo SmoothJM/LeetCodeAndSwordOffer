@@ -30,6 +30,6 @@ public class VerifySquenceOfBST_33 {
 		if(i<seq.length-1) {
 			right = VerifySquenceOfBST(Arrays.copyOfRange(seq, i, seq.length-1));
 		}
-		return true;
+		return left && right;
 	}
 }
