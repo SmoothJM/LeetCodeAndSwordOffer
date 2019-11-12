@@ -13,7 +13,7 @@ class RandomListNode {
 }
 
 
-public class CloneComplexList {
+public class CloneComplexList_35 {
     public static void main(String[] args) {
         RandomListNode a = new RandomListNode(1);
         RandomListNode b = new RandomListNode(2);

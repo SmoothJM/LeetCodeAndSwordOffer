@@ -21,6 +21,8 @@ public class RebuildBinaryTree07 {
         TreeNode root = rebuild(preOrder, midOrder,0,preOrder.length-1,0,midOrder.length-1);
         TreeNode r2 = reConstructBinaryTree(preOrder,midOrder);
         preT(r2);
+        System.out.println();
+        preT(root);
     }
 
     public static TreeNode rebuild(int[] pre, int[] mid, int pStart, int pEnd, int mStart, int mEnd) {
@@ -39,6 +41,7 @@ public class RebuildBinaryTree07 {
         return root;
     }
 
+
     public static TreeNode reConstructBinaryTree(int[] pre, int[] mid) {
         if(pre.length==0 || mid.length==0){
             return null;
@@ -51,7 +54,6 @@ public class RebuildBinaryTree07 {
                 break;
             }
         }
-
         curr.left = reConstructBinaryTree(Arrays.copyOfRange(pre,1,index+1),Arrays.copyOfRange(mid,0,index));
         curr.right = reConstructBinaryTree(Arrays.copyOfRange(pre,index+1,pre.length),Arrays.copyOfRange(mid,index+1,mid.length));
         return curr;
