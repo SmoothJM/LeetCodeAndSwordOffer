@@ -19,7 +19,7 @@ public class SerializeDeserializeBinaryTree_37 {
         b3.left = d5;
         b3.right = e6;
 
-        System.out.println(Arrays.toString(Serialize2(head1).split(",")));
+        System.out.println(Arrays.toString(Serialize(head1).split(",")));
         TreeNode.showPreOrder(Deserialize(Serialize2(head1)));
     }
 
@@ -62,6 +62,12 @@ public class SerializeDeserializeBinaryTree_37 {
         return s;
     }
     private static int index=-1;
+
+    /**
+     * 反序列化二叉树
+     * @param str
+     * @return
+     */
     public static TreeNode Deserialize(String str) {
         if(str==null || str.length()==0) return null;
         index++;

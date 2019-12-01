@@ -1,6 +1,6 @@
 package offer;
 
-public class TwoDArray04 {
+public class TwoDArray_04 {
 
     public static void main(String[] args) {
         int[][] arr = new int[][]

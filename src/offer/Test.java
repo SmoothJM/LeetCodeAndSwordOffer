@@ -5,8 +5,10 @@ import java.util.Stack;
 public class Test {
     public static void main(String[] args) {
 
-        loopTreeNode(TreeNode.buildTree());
-        TreeNode.showPreOrder(TreeNode.buildTree());
+//        loopTreeNode(TreeNode.buildTree());
+//        TreeNode.showPreOrder(TreeNode.buildTree());
+        int[] a = {1,2,3,4};
+        System.out.println(a.toString());
     }
 
 

@@ -15,7 +15,6 @@ public class PermutationOfStr_38 {
         if (str == null || str.length() == 0) {
             return list;
         }
-
         collect(str.toCharArray(), 0, list);
         Collections.sort(list);
         return list;
@@ -45,5 +44,4 @@ public class PermutationOfStr_38 {
         chars[i] = temp;
     }
 
-//    public static ArrayList<String> help(String str,)
 }
