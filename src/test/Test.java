@@ -11,8 +11,8 @@ public class Test {
 //        System.out.println(Arrays.toString(bubbleSort(arr)));
 //        System.out.println(Arrays.toString(quickSort(arr, 0, arr.length - 1)));
 //        System.out.println(Arrays.toString(mergeSort(arr)));
-//        System.out.println(Arrays.toString(radixSort(arr)));
-        System.out.println(Arrays.toString(heapSort(arr)));
+        System.out.println(Arrays.toString(radixSort(arr)));
+//        System.out.println(Arrays.toString(heapSort(arr)));
 //        System.out.println(binarySearch(insertSort(arr), 1416));
 
     }
@@ -151,13 +151,39 @@ public class Test {
     }
 
     public static int[] radixSort(int[] a) {
-
+        if(a==null || a.length<=0)return a;
+        int max=a[0];
+        int maxBit = 0;
+        for (int i = 1; i < a.length; i++) {
+            if(max<a[i]) {
+                max = a[i];
+            }
+        }
+        while(max!=0){
+            maxBit++;
+            max /= 10;
+        }
+        int[][] bucket = new int[10][a.length];
+        int base=1;
+        for (int i = 0; i < maxBit; i++) {
+            int[] bn=new int[10];
+            for (int j = 0; j < a.length; j++) {
+                int which = a[j]/base%10;
+                bucket[which][bn[which]++] = a[j];
+            }
+            int k=0;
+            base *= 10;
+            for (int j = 0; j < 10; j++) {
+                for (int l = 0; l < bn[j]; l++) {
+                    a[k++] = bucket[j][l];
+                }
+            }
+        }
         return a;
     }
 
     public static int[] heapSort(int[] a) {
         if (a == null || a.length <= 0) return a;
-
         for (int i = a.length / 2 - 1; i >= 0; i--) {
             adjustHeap(a,i,a.length);
         }
@@ -184,6 +210,7 @@ public class Test {
     }
 
     public static void swap(int[] a, int i, int j){
+        if (i==j) return;
         a[i] = a[i] + a[j];
         a[j] = a[i] - a[j];
         a[i] = a[i] - a[j];
