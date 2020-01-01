@@ -7,8 +7,11 @@ public class Test {
 
 //        loopTreeNode(TreeNode.buildTree());
 //        TreeNode.showPreOrder(TreeNode.buildTree());
-        int[] a = {1,2,3,4};
-        System.out.println(a.toString());
+        int count=0;
+        for (int i = 10; i <= 99; i++) {
+            count++;
+        }
+        System.out.println(count);
     }
 
 

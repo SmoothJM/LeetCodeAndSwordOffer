@@ -40,6 +40,8 @@ public class FindGreatestSumOfSubArray_42 {
     /**
      * On时间解决
      * 思路：如果当前的和比当前的元素还小，说明当前和可抛弃。
+     * 也就是说，加上第i位的和比第i位的值还小，说明前i-1位小于零，可抛弃
+     * 从第i位开始算。
      * @param nums
      * @return
      */
@@ -48,14 +50,26 @@ public class FindGreatestSumOfSubArray_42 {
         int sum = 0;
         int max = nums[0];
         for (int i = 0; i < nums.length; i++) {
-//            sum += nums[i];
-//            if(sum<nums[i]){
-//                sum=nums[i];
-//            }
             if(sum<=0){
                 sum = nums[i];
-            }else{
+            }
+            else{
                 sum += nums[i];
+            }
+            if(max<sum) {
+                max = sum;
+            }
+        }
+        return max;
+    }
+    public static int _solution2(int[] nums) {
+        if (nums == null || nums.length <= 0) return Integer.MIN_VALUE;
+        int sum = 0;
+        int max = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            if(sum<nums[i]){
+                sum=nums[i];
             }
             if(max<sum) {
                 max = sum;
