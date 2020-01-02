@@ -7,11 +7,8 @@ public class Test {
 
 //        loopTreeNode(TreeNode.buildTree());
 //        TreeNode.showPreOrder(TreeNode.buildTree());
-        int count=0;
-        for (int i = 10; i <= 99; i++) {
-            count++;
-        }
-        System.out.println(count);
+        String a = "123";
+        System.out.println((Object)(a.charAt(0)) instanceof Character);
     }
 
 
